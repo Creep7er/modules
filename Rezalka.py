@@ -12,8 +12,6 @@
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU Affero General Public License for more details.
-#   если не подписан на t.me/keyzend
-#   твоя мама шлюха
 #   You should have received a copy of the GNU Affero General Public License
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
@@ -34,7 +32,7 @@ def register(cb):
 class GriderMod(loader.Module):
 	"""Модуль"""
 	strings = {
-		"name": "Gridung"
+		"name": "Резалка"
 	}
 
 	async def client_ready(self, client, db):
@@ -70,10 +68,10 @@ class GriderMod(loader.Module):
 			reply_message = await message.get_reply_message()
 			data = await check_media(reply_message)
 			if isinstance(data, bool):
-				await utils.answer(message, "<code>Реплай на пикчу или стикер блять!</code>")
+				await utils.answer(message, "<code>Реплай на пикчу или стикер!</code>")
 				return
 		else:
-			await utils.answer(message, "`Реплай на пикчу или стикер блять`")
+			await utils.answer(message, "`Реплай на пикчу или стикер`")
 			return
 		
 		await message.edit("Чик чирикаю")
